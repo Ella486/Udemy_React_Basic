@@ -1,0 +1,20 @@
+Class-based Componet Lifecycle
+
+componentDidMount()
+- 컴포넌트가 마운트되면 호출된다.
+즉, 컴포넌트가 평가되고 DOM에 렌더링될 때이다.
+이는 useEffect()를 사용한 것과 같다.
+ex. useEffect(..., []);
+
+componentDidUpdate()
+- 컴포넌트가 갱신되면 호출된다.
+무언가, 상태 같은 것이 변경되거나 하면
+컴포넌트가 재평가, 재 렌더링되면 그 때 호출된다.
+ex. useEffect(..., [someValue]);
+
+componentWillUnmount()
+- 컴포넌트가 DOM에서 삭제되기 직전에 호출되며
+이것은 useEffect()에 있는 cleanup()와 같다.
+cleanup() 은 effect 함수가 다시 실행되기 직전에 호출되며,
+항상 컴포넌트가 DOM으로부터 삭제되기 전에 다시 호출됩니다.
+ex. useEffect(() => { return () => {...} }, []);
