@@ -33,6 +33,8 @@ const useHttp = () => {
         isLoading,
         error,
         sendRequest
+
+        // javascript 문법 key-value 값이 같으면 위에 처럼 하나만 써도 됨.
         // isLoading: isLoading,
         // error: error,
         // sendRequest: sendRequest
