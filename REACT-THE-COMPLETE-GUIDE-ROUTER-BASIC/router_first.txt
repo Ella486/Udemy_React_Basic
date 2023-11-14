@@ -1,0 +1,15 @@
+<처음>
+node js 는 설치되어있다는 전제하에...
+react인 프로젝트일 때 
+
+npm install 
+ ==> package-lock.json 파일 생성되고 / node_modules 폴더 생성됨.
+
+npm install react-router-dom
+
+
+ 
+
+ 
+
+ 
