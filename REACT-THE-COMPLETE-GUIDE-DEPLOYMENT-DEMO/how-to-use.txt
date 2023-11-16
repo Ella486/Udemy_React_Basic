@@ -1,0 +1,64 @@
+<Udemy - [한글자막] React 완격 가이드 with Redux, Next.js, TypeScript>
+ => 섹션 23. 리액트 앱 배포하기 
+ => 374. 배포 예시 강의 참고
+
+
+- A React.js application (i.e., the frontend SPA)
+
+You must run "npm install"
+
+The React app dev server is then also started via "npm start" .
+
+- 빌드시
+프로그램을 종료후 "npm run build" 명령어로 optimize 한다.
+
+<firebase hostiong 설정>
+(1) Firebase CLI 설치
+    - firebase sever에 code를 upload 하는 것을 도와주는 도구 설치
+    "npm install -g firebase-tools"
+
+     but, Mac OS 나 Linux에서는 앞에 "sudo" 를 붙여서 실행한다.
+     "sudo npm install -g firebase-tools"
+도구 설치후
+(2) 프로젝트 초기화
+    - Google에 로그인
+    "firebase login"
+
+    => Allow Firebase to collect CLI and Emulator Suite usage and error reporting information? 의 y 하고 나서
+       로그인 하면됨
+
+    - 프로젝트 시작
+    "firebase init"
+
+    => 여러 기능이 있긴 한데 우리는 단순히 호스팅 기능만 사용할꺼라서 화살표로 위 아래로 움직여서 설정하고
+       스페이스바로 Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys 
+       선택 후 엔터 누르기
+    => 그 다음 기존 프로젝트 사용을 선택하기 Use an existing project
+       (우리는 앞에 firebase에서 이미 프로젝트를 하나 생성해놨기 때문에)
+    => 방금 생성한 프로젝트 선택하기
+       (ex. reat-deployment-demo)
+    => What do you want to use as your public directory? (업로드할 파일이 어디있는지?)
+       "build" 라고 입력 (build 폴더 안에 있으므로)
+    => Configure as a single-page app (rewrite all urls to /index.html)? (SPA 설정할지 질문?) y
+    => Set up automatic builds and deploys with GitHub? (자동 빌드 또는 배포가 필요한지?) N
+    => File build/index.html already exists. Overwrite? (기존 build/index.html 파일을 덮어쓸지?) N
+프로젝트 초기화되고 백앤드 연결됨
+build folder -> public foler -> .firebaserc 와 firebase.json 파일 존재함.
+(3) Firebase 호스팅에 배포
+    - "firebase deploy"
+    - 주어진 URL를 통해서 자신의 웹사이트에 방문할 수 있다.
+      Hosting URL: https://react-deployment-demo-7c53b.web.app
+
+(4) 사용자 도메인 지정 가능
+(5) 웹사이트의 배포 중단하고 오프라인으로 전환 시
+    - "firebase hosting:disable" 입력
+    - Are you sure you want to disable Firebase Hosting for the site        
+      react-deployment-demo-7c53b
+      This will immediately make your site inaccessible!
+      (웹사이트가 오프라인으로 전환되고 접근할 수 없다는 질문을 한번 더 물어봄)
+      Y or N 선택
+
+
+
+
+
